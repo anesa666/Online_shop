@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&display=swap');
+
+h2 {
+  font-family: "Bitcount Grid Single", sans-serif;
+  
+}
+
+body{
+    background-color:  whitesmoke;
+}
+
+body ::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+a{
+    text-decoration: none;
+}
+
+header{
+    background-color: azure;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    padding: 2rem 0;
+}
+
+.container{
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.container nav{
+    display: flex;
+    justify-content: space-between;
+    align-items:  center;
+}
+
+.container nav .logo{
+    color: black;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.container .nav-link{
+    display: flex;
+}
+
+.container .nav-link li{
+    list-style: none;
+    margin: 0 0.5rem;
+}
+
+.container ul li a{
+    color: black;
+    font-size: 1.3rem;
+    padding: 0.7rem 1rem;
+    display: block;
+    border-radius: 10px;
+}
+
+.container ul li a:hover 
+.container ul li a.active{
+    background-color: #ecf0f1;
+}
+
+.icon{
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@media(max-width: 768px) {
+   .icon{
+    display: block;
+   }
+   .container .nav-link{
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: azure;
+    position: absolute;
+    width: 350px;
+    height: 60vh;
+    top: -800px;
+    right: 0;
+    z-index: 10;
+    transition: all 0.7s
+   }
+
+   .nav-link.active{
+    top: 10%;
+    transition: all 0.7s ease-in;
+   }
+}
